@@ -1,23 +1,25 @@
 {
-  "name": "todo-vite2",
+  "name": "sulgi_loop",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "preview": "vite preview --port 4173",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "@popperjs/core": "^2.9.2",
-    "bootstrap": "^5.0.0-beta3",
-    "vue": "^3.0.5"
+    "bootstrap": "^5.2.1",
+    "chart.js": "^3.9.1",
+    "vue": "^3.2.38",
+    "vue-chartjs": "^4.1.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.2.5",
-    "@vue/compiler-sfc": "^3.0.5",
-    "vite": "^2.4.3"
-  },
-  "main": "vetur.config.js",
-  "author": "",
-  "license": "ISC",
-  "description": ""
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.22.0",
+    "eslint-plugin-vue": "^9.3.0",
+    "prettier": "^2.7.1",
+    "vite": "^3.0.9"
+  }
 }
