@@ -45,21 +45,21 @@
         <img src="../assets/icons/arrowHead.svg" :style="arrowTwoStyle" />접기
       </button>
     </div>
-    <div v-if="isActive === true">
-      <div class="cardStyle" id="expandCardStyle">내용</div>
-    </div>
+  </div>
+  <div v-if="isActive === true">
+    <card-detail :student="student" :key="index" />
   </div>
 </template>
 
 <script setup>
 import { reactive, ref } from "vue";
+import cardDetail from "../components/cardDetail.vue";
 
 const isActive = ref(false);
 
 const toggle = () => {
   if (!isActive.value) {
     isActive.value = true;
-    document.getElementById("expandCardStyle").class += "active";
     console.log(isActive.value);
   } else {
     isActive.value = false;
@@ -168,19 +168,10 @@ const unitStyle = reactive({
 .cardStyle {
   width: 328px;
   height: 251px;
-  border: 1px solid #000000;
-  background: #ffffff;
-  border-radius: 16px;
-  margin-bottom: 10px;
-  transition: height 1s;
-}
 
-.cardStyle.active {
-  width: 328px;
-  height: 551px;
-  border: 1px solid #000000;
   background: #ffffff;
   border-radius: 16px;
+
   margin-bottom: 10px;
 }
 </style>
